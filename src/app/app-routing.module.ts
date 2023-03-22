@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'heroes/infoheroe/:id', component: InfoheroeComponent },
-  { path: 'buscar/:termino', component: BuscadorComponent }
+  { path: 'heroes/buscar/:termino', component: BuscadorComponent }
   /*{ path: '**', pathMatch: 'full', redirectTo: '/home' }*/
 ];
 

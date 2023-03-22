@@ -11,6 +11,7 @@ import { Router} from '@angular/router';
 export class BuscadorComponent  implements OnInit {
 
   heroes:any[] = [];
+  termino!: string;
   constructor(private activatedRoute:ActivatedRoute, 
               private _heroesService: HeroesService,  private router:Router){
 
@@ -18,11 +19,12 @@ export class BuscadorComponent  implements OnInit {
 
   ngOnInit(){
 
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params['termino']);
+    this.activatedRoute.params.subscribe(params=> {
+      this.termino = params['termino'];
+      console.log("buscador", params['termino']); //con el activeRoute capturamos el termino de la URL
       this.heroes = this._heroesService.buscarHeroes(params['termino']);
       console.log(this.heroes);
-    })
+    });
 
   }
 

@@ -63,6 +63,7 @@ export class HeroesService {
       casa:"DC"
     },
   ];
+  
 
   constructor() { 
     console.log("Servicio listo para usar!!!");
@@ -73,11 +74,15 @@ export class HeroesService {
     return this.heroes;
   }
 
-  getHeroe(idx: number) {
+  getInforHeroe(idx: number) {
     return this.heroes[idx];
+    
+  
   }
 
+  
   buscarHeroes(termino:string):Heroe[]{
+
     let heroesArr:Heroe[] = [];
     termino = termino.toLowerCase();
 
